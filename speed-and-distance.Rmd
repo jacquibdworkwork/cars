@@ -2,11 +2,17 @@
 title: "speed-and-distance"
 author: "JSP"
 date: "`r Sys.Date()`"
+knit: (function(input_file, encoding) {
+    out_dir <- 'docs';
+    rmarkdown::render(input_file,
+      encoding=encoding,
+      output_dir=file.path(dirname(input_file), out_dir))})
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
 ## R Markdown
